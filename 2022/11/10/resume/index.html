@@ -20,7 +20,7 @@
 
 
 
-<title>Hello World | 局外人</title>
+<title>JS逆向 相关代码及笔记 | 局外人</title>
 
 
 
@@ -118,12 +118,12 @@
         <div class="post-title">
             
             
-                Hello World
+                JS逆向 相关代码及笔记
             
             
         </div>
         <span class="post-date">
-            Nov 15, 2023
+            Nov 10, 2022
         </span>
     </div>
     <div class="post-img">
@@ -133,19 +133,16 @@
     </div>
 </div>
     <div class="post-content">
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <h2 id="📖笔记比较乱-oﾟvﾟ-ノ，给自己看的🥃"><a href="#📖笔记比较乱-oﾟvﾟ-ノ，给自己看的🥃" class="headerlink" title="📖笔记比较乱 (oﾟvﾟ)ノ，给自己看的🥃"></a>📖笔记比较乱 (oﾟvﾟ)ノ，给自己看的🥃</h2><p>以下是一段Python调用JS的代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">load_js</span>(<span class="params">jspath</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(jspath, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">        <span class="keyword">return</span> file.read()</span><br><span class="line">cookies[<span class="string">&#x27;m&#x27;</span>] = execjs.<span class="built_in">compile</span>(load_js(<span class="string">&#x27;xxx.js&#x27;</span>)).call(<span class="string">&#x27;kk&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>对我来说很好用ヾ(≧▽≦*)o</p>
+</blockquote>
+<p>JSVMP 是JS代码虚拟化保护方案<br>解释器+自定义字节码&#x3D;JSVMP</p>
+<p>自定义字节码： 数组 和 字符串 有这两种</p>
+<p>JSVMP补环境<br>主要目的就是 找明文，找对象取值， 找返回值  </p>
+<p>1.找准插桩位置<br>    a. 重复执行的(多次)<br>    b. 信息充足(以出现明文为准，有关键操作，有返回值操作)<br>    c. 插桩位置，出现了密文，要逆向的内容以及关键计算步骤<br>2.根除插桩信息，【猜测】代码执行流程，补充缺失环境</p>
+<p>该笔记会持续更新♪(´▽｀)</p>
 
 </div> 
 
@@ -157,13 +154,13 @@
     <nav class="post-nav">
         <div class="prev-item">
            
+                <div class="icon arrow-left"></div>
+                <div class="post-link">
+                    <a href="/2022/11/15/%E9%97%AA%E7%83%81%E7%9A%84%E6%98%9F/">Prev</a>
+                </div>
+            
         </div>
         <div class="next-item">
-            
-                <div class="icon arrow-right"></div>
-                <div class="post-link">
-                  <a href="/2022/11/15/%E9%97%AA%E7%83%81%E7%9A%84%E6%98%9F/">Next</a>  
-                </div>  
             
         </div>
     </nav>
