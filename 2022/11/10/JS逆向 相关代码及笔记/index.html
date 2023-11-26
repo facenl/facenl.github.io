@@ -20,7 +20,7 @@
 
 
 
-<title>想法 | 局外人</title>
+<title>JS逆向 相关代码及笔记 | 局外人</title>
 
 
 
@@ -118,12 +118,12 @@
         <div class="post-title">
             
             
-                想法
+                JS逆向 相关代码及笔记
             
             
         </div>
         <span class="post-date">
-            Nov 15, 2022
+            Nov 10, 2022
         </span>
     </div>
     <div class="post-img">
@@ -133,9 +133,16 @@
     </div>
 </div>
     <div class="post-content">
-    <p>像往常一样，开着我的小电动车驶在非机动车道。<br>11月的天空，晚上还有一丝的明亮。<br>那远方的星星，吸引了我的注意。<br>以至于我把它们连接在一起，都能浮现出画面。</p>
-<p>下班的人很多，车水马龙。<br>喧噪的喇叭声，还有堵在人行道路上的小商贩。</p>
-<p>工作，我觉得选择自己喜欢才是最重要的。<br>做自己喜欢的工作，拿着满意的薪资。<br>待在一个有活力，有想法的公司。</p>
+    <h2 id="📖笔记比较乱-oﾟvﾟ-ノ，给自己看的🥃"><a href="#📖笔记比较乱-oﾟvﾟ-ノ，给自己看的🥃" class="headerlink" title="📖笔记比较乱 (oﾟvﾟ)ノ，给自己看的🥃"></a>📖笔记比较乱 (oﾟvﾟ)ノ，给自己看的🥃</h2><p>以下是一段Python调用JS的代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">load_js</span>(<span class="params">jspath</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(jspath, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;UTF-8&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">        <span class="keyword">return</span> file.read()</span><br><span class="line">cookies[<span class="string">&#x27;m&#x27;</span>] = execjs.<span class="built_in">compile</span>(load_js(<span class="string">&#x27;xxx.js&#x27;</span>)).call(<span class="string">&#x27;kk&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>对我来说很好用ヾ(≧▽≦*)o</p>
+</blockquote>
+<p>JSVMP 是JS代码虚拟化保护方案<br>解释器+自定义字节码&#x3D;JSVMP</p>
+<p>自定义字节码： 数组 和 字符串 有这两种</p>
+<p>JSVMP补环境<br>主要目的就是 找明文，找对象取值， 找返回值  </p>
+<p>1.找准插桩位置<br>    a. 重复执行的(多次)<br>    b. 信息充足(以出现明文为准，有关键操作，有返回值操作)<br>    c. 插桩位置，出现了密文，要逆向的内容以及关键计算步骤<br>2.根除插桩信息，【猜测】代码执行流程，补充缺失环境</p>
+<p>该笔记会持续更新♪(´▽｀)</p>
 
 </div> 
 
@@ -149,16 +156,11 @@
            
                 <div class="icon arrow-left"></div>
                 <div class="post-link">
-                    <a href="/2023/11/15/hello-world/">Prev</a>
+                    <a href="/2022/11/15/%E6%83%B3%E6%B3%95/">Prev</a>
                 </div>
             
         </div>
         <div class="next-item">
-            
-                <div class="icon arrow-right"></div>
-                <div class="post-link">
-                  <a href="/2022/11/10/resume/">Next</a>  
-                </div>  
             
         </div>
     </nav>
